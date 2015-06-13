@@ -6,7 +6,7 @@ export default Backbone.View.extend({
 	template: JST.form,
 
 	events: {
-		'click .blog-post-submit': 'addPost',
+		'submit': 'addPost',
 	},
 
 	initialize: function() {
@@ -18,7 +18,6 @@ export default Backbone.View.extend({
 	},
 
 	addPost: function(e) {
-		console.log('in submit');
 		e.preventDefault();
 		var title = this.$('.blog-post-title').val();
 		var content = this.$('.blog-post-content').val();
